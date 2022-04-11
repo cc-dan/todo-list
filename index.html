@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<title>To-do list</title>
+
+	</head>
+	<body ng-app="app" ng-controller="todo-list">
+		<h3>Folders</h3>
+		<button type="button" ng-click="ffilter=''">All folders</button>
+		<button type="button" ng-repeat="folder in folders" ng-click="$parent.ffilter=folder.name">{{folder.name}}</button>
+
+		<h1>To-do list</h1>
+		<button type="button" ng-click="createFolder('New Folder')">Create new folder</button>
+
+		<ul ng-repeat="folder in folders | filter:{name: ffilter}:folderFilter(ffilter)">
+			<h3>{{folder.name}}</h3>
+
+			<button type="button" ng-click="editFolder(folder.name)">Edit folder</button>
+			<button type="button" ng-click="removeFolder(folder.name)">Delete folder</button>
+			<button type="button" ng-click="addElement('', folder.name); editElement('', folder.name)">+ Item</button>
+			
+			<div ng-repeat="item in folder.items track by $index">
+				<label><input type="checkbox" ng-checked="item.checked" ng-click="item.checked = !item.checked">{{item.text}}</label>
+				<button type="button" ng-click="editElement(item.text, folder.name)">Edit</button>
+				<button type="button" ng-click="removeElement(item.text, folder.name)">-</button><br>
+			</div>
+		</ul>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.js"></script>
+
+		<script src="app/app.js"></script>
+		<script src="app/todo.js"></script>
+	</body>
+</html>

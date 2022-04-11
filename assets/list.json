@@ -1,0 +1,24 @@
+[
+	{
+		"name": "Main",
+		"items": [
+			{
+				"text": "Go shopping",
+				"checked": false
+			},
+			{
+				"text": "Study for test",
+				"checked": false
+			}
+		]
+	},
+	{
+		"name": "Programming",
+		"items": [
+			{
+				"text": "Read about databases",
+				"checked": false
+			}
+		]
+	}
+]
