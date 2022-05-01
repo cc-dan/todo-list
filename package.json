@@ -4,7 +4,7 @@
   "description": "simple todo list app with folders",
   "main": "app/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/cc-dan/todo-list#readme",
   "dependencies": {
-    
+    "express": "^4.18.1"
   }
 }
