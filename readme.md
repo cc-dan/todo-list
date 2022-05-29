@@ -10,6 +10,10 @@ Express 4.18.1
 
 # ejecutando la aplicación
 
+Visitar https://cc-dan.github.io/todo-list
+
+O bien:
+
 Instalar dependencias con "npm install" en el directorio del proyecto
 
 Ejecutar run.sh
