@@ -1,6 +1,6 @@
 # todo-list
 
-simple todo-list with folders support
+todo-list application with folders support
 
 # dependencies
 
